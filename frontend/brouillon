@@ -1,0 +1,15 @@
+import game from './assets/game.jpg'
+
+/* Corps du site contient la nav barre et un place holder ou placer le jeu ou profil, ou tchat ou autre composant*/
+function Body() {
+  return(
+    <div className='body'>
+      <Nav />
+      <img className='game' src={game} alt='placeholder' ></img>
+    </div>
+  );
+}
+
+ useEffect(() => {
+    axios.get("http://localhost:4200/user").then((res) => console.log(res.data));
+  }, [])
